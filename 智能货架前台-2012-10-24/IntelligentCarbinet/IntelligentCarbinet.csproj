@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C2EBE6A-6A72-4064-B262-C845F5166CBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntelligentCarbinet</RootNamespace>
+    <AssemblyName>智能货架</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>5.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Community.CsharpSqlite, Version=3.7.7.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Community.CsharpSqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Community.CsharpSqlite.SQLiteClient, Version=3.7.7.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Community.CsharpSqlite.SQLiteClient.dll</HintPath>
+    </Reference>
+    <Reference Include="fastJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\InventoryMSystem\Dll\fastJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EpcProduct.cs" />
+    <Compile Include="EpcProductHelper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEpcStatics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEpcStatics.Designer.cs">
+      <DependentUpon>frmEpcStatics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemindDisappear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemindDisappear.Designer.cs">
+      <DependentUpon>frmRemindDisappear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="public\CsharpSQLiteHelper.cs" />
+    <Compile Include="public\epcInfo.cs" />
+    <Compile Include="public\PayCheck.cs" />
+    <Compile Include="public\ProductCategory.cs" />
+    <Compile Include="public\下载\res.cs" />
+    <Compile Include="public\下载\ResSyncer.cs" />
+    <Compile Include="settings\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carbinet\Cabinet.cs" />
+    <Compile Include="Carbinet\CarbinetFloor.cs" />
+    <Compile Include="public\ConfigDB.cs" />
+    <Compile Include="Carbinet\DocumentFile.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings\frmProductConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings\frmProductConfig.Designer.cs">
+      <DependentUpon>frmProductConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRemind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemind.Designer.cs">
+      <DependentUpon>frmRemind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowInfo.Designer.cs">
+      <DependentUpon>frmShowInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings\frmSysConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings\frmSysConfig.Designer.cs">
+      <DependentUpon>frmSysConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="public\HttpDownloader.cs" />
+    <Compile Include="public\LedInfo.cs" />
+    <Compile Include="public\MemoryTable.cs" />
+    <Compile Include="public\MonitorMode.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEpcStatics.resx">
+      <DependentUpon>frmEpcStatics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemindDisappear.resx">
+      <DependentUpon>frmRemindDisappear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings\frmProductConfig.resx">
+      <DependentUpon>frmProductConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRemind.resx">
+      <DependentUpon>frmRemind.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowInfo.resx">
+      <DependentUpon>frmShowInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings\frmSysConfig.resx">
+      <DependentUpon>frmSysConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoubleCarbinet.resx">
+      <DependentUpon>frmDoubleCarbinet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleCarbinet.resx">
+      <DependentUpon>frmSingleCarbinet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="staticClass.cs" />
+    <Compile Include="public\TDJ_RFIDHelper.cs" />
+    <Compile Include="public\UDPServer.cs" />
+    <Compile Include="frmDoubleCarbinet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoubleCarbinet.Designer.cs">
+      <DependentUpon>frmDoubleCarbinet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleCarbinet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleCarbinet.Designer.cs">
+      <DependentUpon>frmSingleCarbinet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PieChart\PieChart.csproj">
+      <Project>{696E929A-6A4A-4C6D-A8B2-C4F25F781940}</Project>
+      <Name>PieChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zedgraph_source_v515\ZedGraph.csproj">
+      <Project>{2541686B-1673-43BF-AF89-3163945DB009}</Project>
+      <Name>ZedGraph</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="5.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
